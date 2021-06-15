@@ -20,4 +20,5 @@ public class Ventana extends Application{
 	}
 	
 		// este es el main :v
+		//implementando el observer
 }
