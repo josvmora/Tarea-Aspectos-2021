@@ -1,12 +1,11 @@
+import javafx.scene.layout.GridPane;
 
 public aspect ObserverProtocol {
 	
-	PaneOrganizer pane = new PaneOrganizer();
-	
-	pointcut changeColor() : execution(* handle(*) ) ;
-	after():changeColor(){
-		System.out.println("Color:");
-		
+	pointcut changeColor(GridPane root) : call(* setStyle(*) ) && target (root);
+	after(GridPane root): changeColor(root){
+		String color = root.getStyle();
+		color = color.replace("-fx-background-color:","");
+		System.out.println("Se ha cambiado el color de la pantalla : New color set - "+color.toUpperCase());
 	}
-
 }

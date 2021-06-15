@@ -19,6 +19,5 @@ public class Ventana extends Application{
 		launch(args);
 	}
 	
-		// este es el main :v
-		//implementando el observer
+		//main class
 }
