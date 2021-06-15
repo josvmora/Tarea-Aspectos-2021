@@ -19,5 +19,5 @@ public class Ventana extends Application{
 		launch(args);
 	}
 	
-		//main class
+	
 }

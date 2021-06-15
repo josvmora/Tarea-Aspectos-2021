@@ -6,6 +6,6 @@ public aspect ObserverProtocol {
 	after(GridPane root): changeColor(root){
 		String color = root.getStyle();
 		color = color.replace("-fx-background-color:","");
-		System.out.println("Se ha cambiado el color de la pantalla : New color set - "+color.toUpperCase());
+		System.out.println("cambiando el color de la pantalla : New color set - "+color.toUpperCase()+"\n....Cambio realizado con exito");
 	}
 }
